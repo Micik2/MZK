@@ -1,0 +1,44 @@
+EXEC Wyœlij_kierowcê_w_trasê 3, 5, 2
+EXEC Wyœlij_kierowcê_w_trasê 4, 6, 1 --niesprawny
+
+EXEC Wyœlij_autobus_do_naprawy 802, 'M'
+EXEC Wyœlij_autobus_do_naprawy 804, 'P' --nie ma takiej zajezdni z warsztatem w tej strefie
+
+EXEC Wyœlij_autobus_do_myjni 804, 1
+EXEC Wyœlij_autobus_do_myjni 801, 2 -- nie ma tam myjni
+
+EXEC Dodaj_now¹_liniê 5, 'P'
+EXEC Dodaj_now¹_liniê 6, 'P'
+
+EXEC Dodaj_now¹_trasê_i_przypisz_do_niej_liniê 5, 15, 30, 10, 'Koszewo', 'Gdyñska' 
+EXEC Dodaj_now¹_trasê_i_przypisz_do_niej_liniê 10, 16, 32, 12, 'Tychowo', 'Os. Chopina' -- b³¹d nie ma takiej linii
+
+EXEC Zmiana_trasy 1, 20, 23, 16, 'Spokojna', 'Os. Chopina'
+EXEC Zmiana_trasy 10, 10, 20, 14, 'Koszewo', 'Tychowo' -- b³¹d nie istnieje taka trasa
+
+EXEC Dodaj_autobus 1, 'Jelcz', 'SUPER', 244, 300, 'zwyk³y', 0, 0, 0.17, 60, 30, 2, 2000
+EXEC Dodaj_autobus 3, 'Neoplan', 'T24', 250, 270, 'poœpieszny', 1, 0, 0.157, 60, 40, 3, 2004 --b³¹d w tej zajezdni nie ma ju¿ miejsca
+
+EXEC Wycofaj_autobus 802
+EXEC Wycofaj_autobus 810 --b³¹d nie istnieje autobus o takim numerze seryjnym
+
+EXEC Dodaj_strefê 'W', 'Strefa wiejska, obejmuj¹ca pobliskie miejscowoœci'
+EXEC Dodaj_strefê 'P', 'Strefa podmiejska nr 2' --b³¹d nie mo¿na stworzyæ strefy o takim samym oznaczeniu
+
+EXEC Zmieñ_zakres_strefy 'W', 'Obejmuje wioski le¿¹ce w odleg³oœci 15 km od Rzeszowa'
+EXEC Zmieñ_zakres_strefy 'T', 'Strefa metropolitarna' --b³¹d, taka strefa nie istnieje
+
+EXEC Zmieñ_typ_przystanku 'Koszewo'
+EXEC Zmieñ_typ_przystanku 'Os. Pyrzyckie' --b³¹d nie istnieje taki przystanek
+
+EXEC Zmieñ_godziny_pracy 1, '9:00 - 13:00'
+EXEC Zmieñ_godziny_pracy 10, '0:00 - 6:00' -- b³¹d taki kierowca nie istnieje
+
+EXEC Wyœlij_kierowcê_na_emeryturê 5
+EXEC Wyœlij_kierowcê_na_emeryturê 3 --b³¹d kierowca jest za m³ody
+
+EXEC Zatankuj_autobus 802, 2
+EXEC Zatankuj_autobus 800, 1 --b³¹d nie ma tam urz¹dzenia do tankowania
+
+EXEC Dodaj_kierowcê 'D+E', 50, '1:00 - 5:00'
+EXEC Dodaj_kierowcê 'D1+E1', 57, '6:00 - 14:00' --b³¹d, nie ma takiej kategorii

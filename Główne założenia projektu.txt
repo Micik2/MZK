@@ -1,0 +1,24 @@
+1. id_zajezdni zwiêksza siê automatycznie
+2. Je¿eli autobusowi jest przypisany kierowca to nie mo¿e staæ on w zajezdni (poniewa¿ jest wtedy na trasie)
+3. "Rozbudowa_zajezdni" spowoduje wzrost liczby miejsc na autobusy
+4. "Budowa_warsztatu" spowoduje dodanie warsztatu do konkretnej zajezdni
+5. Trigger przy zmianie iloœci autobusów w zajezdni (bo jak zostanie przypisany kierowca i linia to zmniejszy siê iloœæ w jakiejœ zajezdni)
+6. "Budowa_myjni" spowoduje dodanie myjni do konkretnej zajezdni
+7. "Budowa_stacji_tankowania" spowoduje mo¿liwoœæ tankowani w konkretnej zajezdni
+8. Adres jest STA£Y!
+9. Mo¿na zmieniæ autobus na przegubowy i odwrotnie (o ile w jakiejkolwiek zajezdni jest warsztat), zostanie tak¿e wywo³ana procedura dodania (przes³ania do tej zajezdni konkretnego autobusu - zwiêkszy siê iloœæ autobusów w tej zajezdni, nie mo¿na wykonaæ modernizacji je¿eli nie ma wolnych miejsc na autobusy)
+10. Mo¿na zmieniæ pojemnoœæ baku - analogicznie jak wy¿ej
+11. USUN¥Æ Z RODZAJI AUTOBUSÓW "PRZEGUBOWY" ORAZ "NISKOPOD£OGOWY" (bo te informacje s¹ ju¿ w innych kolumnach, wyklucza³oby to istnienie autobusu poœpiesznego-przegubowego)
+12. SPALANIE JEST STA£E!
+13. MOC SILNIKA JEST STA£A!
+14. ILOŒCI S¥ STA£E!
+15. NUMER SERYJNY JEST STA£Y
+16. DATA PRODUKCJI JEST STA£A
+17. Po przejechaniu danego cyklu zmienia siê przebieg egzemplarza autobusu [TRIGGER]
+18. Nie mo¿na przypisaæ kierowcy autobusu, który jest niesprawny
+19. WIEK KIEROWCY JEST STA£Y
+20. Mo¿na zmieniæ etat (poprzez zmianê godzin pracy)
+21. Dana linia nie mo¿e mieæ przypisanych wiêcej, ni¿ 2 trasy
+22. 
+
+
